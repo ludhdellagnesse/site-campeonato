@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="ficha-inscrição.html">Ficha de inscrição</a>
+        <a href="tabela-classificacao.html">Tabela de Classificação</a>
+    </nav>
+    
+    <h1>ficha de inscrição</h1>
+    <form action="cadastrar.php" method="POST">
+        <p>
+            <label for="timeID">Nome do time</label>
+            <input name="time" id="timeID" required>
+        </p>
+        <p>
+            <label for="responsavel">Nome do responsável</label>
+            <input name="responsavel" id="responsavel" maxlength="15">
+        </p>
+        <p>
+        <label for="email_responsavel">E-mail do responsável</label>
+        <input type="email" id="email_responsavel" name="email-responsável">
+        </p>
+        <p>
+            <label>Cidade de Origem</label>
+            <select name="Cidade">
+                <option value="SBO">Santa Bárbara D'Oeste</option>
+                <option value="AME">Americana</option>
+                <option value="Sum">Sumaré</option>
+            </select>
+        </p>
+        <p>
+            <label>Campeonato:</label>
+            <input type="radio" name="campeonato" value="Estadual"> Estadual
+            <input type="radio" name="campeonato" value="Regional"> Regional
+        </p>
+        <p>
+            <label for="consideracoes">Considerações:</label>
+            <br>
+            <textarea name="consideracoes" id="consideracoes"></textarea>
+        </p>
+        <p>
+        <label>Escudo:</label>
+        <input type="file">
+</p>
+        <button type="submit">enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+</body>
+</html>
